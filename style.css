@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url('https://www.shutterstock.com/image-photo/kazan-russia-oct-02-2021-600nw-2050982990.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0dcdc;
+  color: white;
+  padding: 10px 20px;
+}
+#searchBar, #categoryFilter {
+  padding: 5px;
+  margin: 0 5px;
+}
+#darkToggle, #loginBtn, #cartBtn {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  justify-items: center; 
+}
+.product {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 480px;        /* Increased card height */
+  width: 300px; 
+    transition: transform 0.3s ease;
+     box-sizing: border-box;
+  
+}
+.product:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+.product img {
+  width: 100%;
+  
+  max-height: 230px; 
+  object-fit: cover;
+  border-radius: 10px; 
+    display: block;
+     flex-shrink: 0;
+}
+.product button {
+  margin-top: auto;
+  background-color: #d18204;
+  border: none;
+  padding: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+.product button:hover {
+  background-color: #e88e00;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+.dark-mode header {
+  background-color: #1f1f1f;
+}
+.dark-mode .product {
+  background-color: #333;
+  color: white;
+}
+.dark-mode .modal-content {
+  background-color: #222;
+  color: white;
+}
+.dark-mode input, .dark-mode select {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 90%;
+}
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  height: 35px;
+}
+#cartItems {
+  text-align: left;
+  margin-top: 10px;
+}
+#searchBar, #categoryFilter {
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+#searchBar:focus, #categoryFilter:focus {
+  outline: none;
+  border-color: #ff9900;
+  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+}
+
+

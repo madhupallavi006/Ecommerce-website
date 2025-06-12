@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amazon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+  
+    
+
+    <input type="text" id="searchBar" placeholder="Search products..." />
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="electronics">Electronics</option>
+      <option value="fashion">Fashion</option>
+      <option value="home">Home </option>
+    </select>
+    <button id="darkToggle">🌙</button>
+    <button id="loginBtn">Login</button>
+    <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main id="productList"></main>
+
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" />
+      <p id="modalPrice"></p>
+      <p id="modalRating"></p>
+      <p id="modalReview"></p>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span id="closeLogin" class="close">&times;</span>
+      <h2>Login / Signup</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="loginSubmit">Submit</button>
+    </div>
+  </div>
+ 
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span id="closeCart" class="close">&times;</span>
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <p id="totalPrice"></p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+<section id="home">
+  <h2>Welcome to Amazon</h2>
+  <p>Explore our wide range of products!</p>
+</section>
+
+
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: madhupallavidasari@gmail.com</p>
+  <p>Phone: 9876543210</p>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
